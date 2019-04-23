@@ -5,7 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './components/index/index.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+//side nav bar
+import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,8 +16,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
     ProjectsComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CollapseModule.forRoot(), BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
