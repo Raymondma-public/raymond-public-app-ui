@@ -10,9 +10,12 @@ import {ProjectsComponent} from './components/projects/projects.component';
 //boostrap 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+//http
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NgbAlertModule,
     NgbModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
