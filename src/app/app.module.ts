@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 //http
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NavbarComponent,
     ProfileComponent,
     FooterComponent,
+    ProjectDetailComponent,
 
   ],
   imports: [

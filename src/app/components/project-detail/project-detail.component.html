@@ -1,0 +1,33 @@
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Project - <small>{{proj.name}}</small></h3>
+              </div>
+
+            </div>
+            
+            <div class="clearfix"></div>
+            <ngb-carousel *ngIf="proj.images" class="project-carousel">
+              <ng-template ngbSlide *ngFor="let projImg of proj.images">
+                <img [src]="projImg.url" alt="projImg.name" class="project-carousel-img">
+                <div class="carousel-caption">
+                  <h3>{{projImg.name}}</h3>
+                  <p>{{projImg.description}}</p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+            <div class="row">
+              <div class="xs-col-12">
+                Start time - {{proj.startDate| date:'yyyy-MM-dd'}}
+              </div>
+              <div class="xs-col-12">
+                Description - {{proj.description}}
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- /page content -->

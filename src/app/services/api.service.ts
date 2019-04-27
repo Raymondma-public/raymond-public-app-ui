@@ -7,10 +7,15 @@ import { Project } from '../models/project';
 })
 export class ApiService {
   apiURL: string = 'http://localhost:8080';
-  
+
   constructor(private httpClient: HttpClient) {}
 
-  public getProjects(){
+  public getProjects() {
     return this.httpClient.get<Project[]>(`${this.apiURL}/projects`);
   }
+
+  public getProjectById(id: number) {
+    return this.httpClient.get<Project>(`${this.apiURL}/projects/${id}`);
+  }
+
 }
