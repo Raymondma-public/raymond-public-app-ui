@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { SafePipe } from './utils/safe-pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
     ProfileComponent,
     FooterComponent,
     ProjectDetailComponent,
-
+    SafePipe
   ],
   imports: [
     NgbAlertModule,

@@ -16,14 +16,14 @@ export class ProjectDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.projId = parseInt(params.get("id"));
+      this.projId = parseInt(params.get('id'));
 
       this.apiService.getProjectById(this.projId).subscribe((proj) => {
         this.proj = proj;
       });
 
     });
-    
+
   }
 
 }
