@@ -1,8 +1,8 @@
 <!-- page content -->
-<div class="container" role="main">
+<div class="container-fluid" role="main">
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-12">
       <div class="x_panel">
         <div class="x_title">
           <h2>Projects</h2>
@@ -28,58 +28,62 @@
     </div>
     <div class="row">
       <!-- start project list -->
-      <table class="table table-striped projects col-xs-12">
-        <thead>
-          <tr>
-            <th style="width: 1%">#</th>
-            <th style="width: 20%">Project Name</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Status</th>
-            <th style="width: 20%">#Edit</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="col-12">
+        <table class="table table-striped projects ">
+          <thead>
+            <tr>
+              <th style="width: 1%">#</th>
+              <th style="width: 20%">Project Name</th>
+              <th style="width: 20%">Description</th>
+              <th style="width: 20%">Image</th>
+              <th style="width: 19%">Status</th>
+              <th style="width: 20%">#Edit</th>
+            </tr>
+          </thead>
+          <tbody>
 
 
-          <tr *ngFor="let proj of projects">
-            <td>#</td>
-            <td>
-              <a>{{proj.name}}</a>
-              <br />
-              <small>{{proj.startDate| date:'yyyy-MM-dd'}}</small>
-            </td>
-            <td>
-              <ul class="list-inline">
-                {{proj.description}}
-              </ul>
-            </td>
-            <td>
+            <tr *ngFor="let proj of projects">
+              <td>#</td>
+              <td>
+                <a>{{proj.name}}</a>
+                <br />
+                <small>{{proj.startDate| date:'yyyy-MM-dd'}}</small>
+              </td>
+              <td>
+                <ul class="list-inline">
+                  {{proj.description}}
+                </ul>
+              </td>
+              <td >
 
-              <ngb-carousel *ngIf="proj && proj.images" class="project-carousel">
-                <ng-template ngbSlide *ngFor="let projImg of proj.images">
-                  <img [src]="projImg.url" alt="projImg.name" class="project-carousel-img">
-                  <div class="carousel-caption">
-                    <h3>{{projImg.name}}</h3>
-                    <p>{{projImg.description}}</p>
-                  </div>
-                </ng-template>
-              </ngb-carousel>
+                <ngb-carousel *ngIf="proj && proj.images" class="project-carousel">
+                  <ng-template ngbSlide *ngFor="let projImg of proj.images">
+                    <img [src]="projImg.url" alt="projImg.name" class="project-carousel-img">
+                    <div class="carousel-caption">
+                      <h3>{{projImg.name}}</h3>
+                      <p>{{projImg.description}}</p>
+                    </div>
+                  </ng-template>
+                </ngb-carousel>
 
-            </td>
-            <td>
-              <button type="button" class="btn btn-success btn-xs">Success</button>
-            </td>
-            <td>
-              <a [routerLink]="['/project-detail',proj.id]" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i>
-                View </a>
-              <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
+              </td>
+              <td>
+                <button type="button" class="btn btn-success btn-xs">Success</button>
+              </td>
+              <td>
+                <a [routerLink]="['/project-detail',proj.id]" class="btn btn-primary btn-xs"><i
+                    class="fa fa-folder"></i>
+                  View </a>
+                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+              </td>
+            </tr>
 
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+
+      </div>
       <!-- end project list -->
     </div>
   </div>

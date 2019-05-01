@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { SafePipe } from './utils/safe-pipe';
+import { SuggestionComponent } from './components/suggestion/suggestion.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SafePipe } from './utils/safe-pipe';
     ProfileComponent,
     FooterComponent,
     ProjectDetailComponent,
-    SafePipe
+    SafePipe,
+    SuggestionComponent,
+    WeatherComponent
   ],
   imports: [
     NgbAlertModule,
